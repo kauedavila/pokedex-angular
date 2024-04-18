@@ -1,0 +1,16 @@
+<div
+  class="w-full flex flex-col p-6 rounded-md items-center justify-center bg-[#403D3D]"
+>
+  <img
+    [src]="
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+      pokeId +
+      '.png'
+    "
+    alt="pokemon"
+    class="w-full h-auto"
+  />
+  <p class="text-white font-bold mt-5 capitalize">
+    {{ pokeName }}
+  </p>
+</div>
