@@ -1,5 +1,8 @@
-<section class="w-full bg-blue-100 rounded-md h-full">
-  <div *ngFor="let pokemon of pokemonList$ | async">
-    {{ pokemon.name }}
-  </div>
+<section
+  class="grid grid-cols-8 gap-10 my-20 mx-32 pr-7 rounded-md w-auto h-[590px] overflow-y-scroll box-border"
+>
+  <app-poke-card
+    *ngFor="let pokemon of pokemonList$ | async"
+    [pokemon]="pokemon"
+  />
 </section>
