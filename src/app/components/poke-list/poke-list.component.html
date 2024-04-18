@@ -1,0 +1,5 @@
+<section class="w-full bg-blue-100 rounded-md h-full">
+  <div *ngFor="let pokemon of pokemonList$ | async">
+    {{ pokemon.name }}
+  </div>
+</section>
