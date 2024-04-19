@@ -17,6 +17,5 @@ export class PokeCardComponent {
   ngOnInit() {
     this.pokeName = this.pokemon.name;
     this.pokeId = this.pokemon.url.split('/')[6];
-    console.log(this.pokeId);
   }
 }

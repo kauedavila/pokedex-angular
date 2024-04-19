@@ -11,7 +11,7 @@ export class PokemonService {
   constructor(private http: HttpClient) {}
 
   getPokemons(offset: number = 0): Observable<any> {
-    const url = `${this.apiUrl}pokemon?offset=${offset}&limit=60`;
+    const url = `${this.apiUrl}pokemon?offset=${offset}&limit=64`;
     return this.http.get(url);
   }
 }

@@ -1,0 +1,10 @@
+<section class="flex justify-center items-center w-full">
+  <app-button
+    [text]="'<'"
+    (click)="onPageChange($event, page - 1)"
+  ></app-button>
+  <app-button
+    [text]="'>'"
+    (click)="onPageChange($event, page + 1)"
+  ></app-button>
+</section>

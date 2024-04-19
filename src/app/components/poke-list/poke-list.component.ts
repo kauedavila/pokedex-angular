@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import { PokemonService } from '../../services/pokemon/pokemon.service';
-import { Observable, map } from 'rxjs';
+import { Component, Input } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
-import { PokeCardComponent } from '../poke-card/poke-card.component';
+import { PokeCardComponent } from '../../poke-card/poke-card.component';
 
 @Component({
   selector: 'app-poke-list',
@@ -12,13 +10,6 @@ import { PokeCardComponent } from '../poke-card/poke-card.component';
   styleUrl: './poke-list.component.css',
 })
 export class PokeListComponent {
-  constructor(private pokemonService: PokemonService) {}
-
-  pokemonList$: Observable<any> = new Observable<any>();
-
-  ngOnInit() {
-    this.pokemonList$ = this.pokemonService
-      .getPokemons()
-      .pipe(map((response) => response.results));
-  }
+  @Input() pokemonList$: any = null;
+  @Input() page: number = 0;
 }

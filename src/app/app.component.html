@@ -2,5 +2,10 @@
 
 <main class="min-h-screen bg-[#2B2A2C]">
   <app-header></app-header>
-  <app-poke-list></app-poke-list>
+  <app-poke-list [pokemonList$]="pokemonList$" [page]="page"></app-poke-list>
+  <app-pagination
+    [total$]="total$"
+    [page]="page"
+    (pageChange)="onPageChange($event)"
+  ></app-pagination>
 </main>
