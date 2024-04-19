@@ -1,5 +1,8 @@
 <button
-  class="px-4 py-2 border-1 bg-white text-[#212B36] border-[#DFE3E8] rounded-md"
+  class="w-8 h-8 border-1 bg-white {{
+    disabled && 'bg-[#6F6F6F] text-[#C4CDD5]'
+  }} text-[#212B36] border-[#DFE3E8] rounded-md"
+  [disabled]="disabled"
 >
   {{ text }}
 </button>

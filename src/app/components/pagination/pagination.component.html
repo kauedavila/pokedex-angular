@@ -2,7 +2,9 @@
   <app-button
     [text]="'<'"
     (click)="onPageChange($event, page - 1)"
+    [disabled]="page === 1"
   ></app-button>
+  <p class="text-white mx-4">{{ page }}</p>
   <app-button
     [text]="'>'"
     (click)="onPageChange($event, page + 1)"
